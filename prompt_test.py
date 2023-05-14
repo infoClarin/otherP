@@ -9,7 +9,7 @@ logos_urls = {}
 for club, country_code in club_dict.items():
 
     # Search the internet for the logo.
-    response = requests.get("https://www.google.com/search?q=" + club + " - " + ountry_code)
+    response = requests.get("https://www.google.com/search?q=" + club + " - " + country_code)
 
     # Extract the URLs from the search results.
     urls = response.text.split("https://")
