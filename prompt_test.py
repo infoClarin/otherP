@@ -6,10 +6,10 @@ club_dict = {'GD Interclube':'ANG','AA Argentinos Juniors':'ARG','Atlético Tucu
 logos_urls = {}
 
 # Iterate over the dictionary of clubs.
-for club, name in club_dict.items():
+for club, country_code in club_dict.items():
 
     # Search the internet for the logo.
-    response = requests.get("https://www.google.com/search?q=" + club)
+    response = requests.get("https://www.google.com/search?q=" + club + " - " + ountry_code)
 
     # Extract the URLs from the search results.
     urls = response.text.split("https://")
